@@ -1,11 +1,3 @@
-public class Aditya
-{
-    public static void main(String [] args)
-    {
-        System.out.println("These are my answers to the Unit 2 FRQ.");
-    }
-}
-
 /*
 These are my answers to the Unit 2 FRQ.
 
