@@ -1,6 +1,8 @@
 /*
 These are my answers to the Unit 3 FRQ.
 
+------------Question 1------------
+
 a.) Write a code segment that prints "attending" if RSVP is true & prints "not attending" otherwise.
 Write the code segment below.
 --
@@ -111,4 +113,36 @@ else
     System.out.println("False");
 }
 
+------------Question 2------------
+
+Write the method drawSquare below.
+
+--
+public class Draw
+{
+    public void drawLine(int x1, int y1, int x2, int y2)
+    {
+
+    }
+
+    public void drawSquare (int x, int y, int Len)
+    {
+        if (Len > y && y <= (10 - x))
+        {
+            Len = y;
+        }
+        else if (Len > (10 - x) && (10 - x) <= y)
+        {
+            Len = 10 - x;
+        }
+
+        drawLine (x, y, x + Len, y);
+        drawLine (x, y, x, y - Len);
+        drawLine(x, y - Len, x + Len, y - Len);
+        drawLine (x + Len, y, x + Len, y - Len);
+
+        System.out.println("The area is: " + Len * Len);
+        System.out.println("The perimeter is: " + Len * 4);
+    }
+}
 */
