@@ -139,4 +139,84 @@ public class test
     }
 }
 --
+
+------------Question 2------------
+
+a.) Write the complete Animal class. Your implementation must meet all specifications and conform to the
+behavior shown in the table.
+--
+public class Animal
+{
+    private String animalType;
+    private String species;
+    private String name;
+
+    public Animal(String animalType, String species, String name)
+    {
+        super();
+        this.animalType = animalType;
+        this.species = species;
+        this.name = name;
+    }
+
+    @Override
+
+    public String toString()
+    {
+        return name + " the " + species + " is a " + animalType;
+    }
+}
+--
+
+b.) Write the complete Herbivore class. Your implementation must meet all specifications and conform to the
+behavior shown in the table.
+--
+public class Herbivore extends Animal
+{
+    public Herbivore(String species, String name)
+    {
+        super("herbivore", species, name);
+    }
+}
+--
+
+c.) Write the complete Elephant class. Your implementation must meet all specifications and conform to the
+behavior shown in the table.
+--
+public class Elephant extends Herbivore
+{
+    private double tuskLength;
+
+    public Elephant(String name, double tuskLength)
+    {
+        super("elephant", name);
+        this.tuskLength = tuskLength;
+    }
+
+    @Override
+
+    public String toString()
+    {
+        return super.toString() + " with tusks " + tuskLength + meters long.";
+    }
+}
+--
+
+Here's the code to test the program.
+--
+public class Test
+{
+    public static void main(String [] args)
+    {
+        Animal lisa = new Animal("carnivore", "lion", "Lisa");
+        System.out.println(lisa);
+
+        Herbivore gary = new Herbivore("giraffe", "Gary");
+        System.out.println(gary);
+
+        Elephant percy = new Elephant("Percy", 2.0);
+        System.out.println(percy);
+    }
+}
+--
 */
